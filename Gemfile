@@ -7,6 +7,8 @@ gem 'rails', '3.2.13'
 
 gem 'sqlite3'
 gem 'haml'
+gem 'normalize-rails'
+gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 
 
 # Gems used only for assets and not required
@@ -25,7 +27,6 @@ group :development do
   gem 'rspec-rails', '~> 2.0'
   gem 'binding_of_caller'
   gem 'better_errors'
-  gem 'normalize-rails'
 end
 
 gem 'jquery-rails'

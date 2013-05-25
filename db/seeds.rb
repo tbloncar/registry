@@ -5,3 +5,11 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Type.destroy_all
+
+types = [
+  Type.create(name: "Classic"),
+  Type.create(name: "Premium"),
+  Type.create(name: "Urban")
+]
