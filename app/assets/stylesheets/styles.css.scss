@@ -1,16 +1,44 @@
 // ***************************************
-// ---- || Styles for Registry App
+// # Styles for Registry App
 // ***************************************
 
+// Colors
+// ***************************************
+
+$purple: #525789;
+$green: #37a883;
+
+
+// Fonts
+// ***************************************
+
+@import url(http://fonts.googleapis.com/css?family=Lemon);
 
 
 
+// Styles
+// ***************************************
 
+.main-header {
+  background: $green;
+  height: 80px;
+}
 
+.logo {
+  display: block;
+  font-family: 'Lemon', sans-serif;
+  font-size: 26px;
+  color: #fff;
+  text-shadow: 0 0 2px rgba(0,0,0,0.25);
+  margin-top: 25px;
+  float: left;
+  clear: both;
+}
 
-
-
-
+.main-nav {
+  float: right;
+  margin-top: 25px;
+}
 
 
 // Mixins
