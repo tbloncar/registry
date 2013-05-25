@@ -6,6 +6,7 @@
 // ***************************************
 
 $purple: #525789;
+$darkPurple: #484d79;
 $green: #37a883;
 
 
@@ -13,32 +14,6 @@ $green: #37a883;
 // ***************************************
 
 @import url(http://fonts.googleapis.com/css?family=Lemon);
-
-
-
-// Styles
-// ***************************************
-
-.main-header {
-  background: $green;
-  height: 80px;
-}
-
-.logo {
-  display: block;
-  font-family: 'Lemon', sans-serif;
-  font-size: 26px;
-  color: #fff;
-  text-shadow: 0 0 2px rgba(0,0,0,0.25);
-  margin-top: 25px;
-  float: left;
-  clear: both;
-}
-
-.main-nav {
-  float: right;
-  margin-top: 25px;
-}
 
 
 // Mixins
@@ -55,3 +30,68 @@ $green: #37a883;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
 }
+
+
+// Styles
+// ***************************************
+
+h1 {
+  font-size: 24px;
+}
+
+.main-header {
+  background: $green;
+  height: 80px;
+  margin-bottom: 30px;
+}
+
+.logo {
+  display: block;
+  font-family: 'Lemon', sans-serif;
+  font-size: 26px;
+  color: #fff;
+  text-shadow: 0 0 2px rgba(0,0,0,0.25);
+  margin-top: 25px;
+  float: left;
+  clear: both;
+}
+
+.main-nav {
+  float: right;
+  margin-top: 18px;
+}
+
+.button {
+  @include rounded-corners(2px);
+}
+
+.main-header-button {
+  display: block;
+  padding: 10px 35px;
+  color: #fff;
+  cursor: pointer;
+  text-transform: uppercase;
+  &:hover {
+    text-decoration: none;
+    color: #fff;
+  }
+}
+
+.sign-in-button {
+  background: $purple;
+  &:hover {
+    background: $darkPurple;
+  }
+}
+
+.sign-out-button {
+  background: $purple;
+  &:hover {
+    background: $darkPurple;
+  }
+}
+
+.home-top-left {
+
+}
+

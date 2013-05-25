@@ -1,5 +1,5 @@
 RegistryApp::Application.routes.draw do
-  root_to => "Pages#home"
+  root :to => "Pages#home"
 
   resources :users
 
