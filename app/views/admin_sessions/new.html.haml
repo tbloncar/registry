@@ -1,6 +1,6 @@
 .row-fluid
   .span12
-    = form_tag sessions_url do
+    = form_tag admin_sessions_url do
       .field
         = label_tag :email
         = email_field_tag :email
@@ -9,4 +9,3 @@
         = password_field_tag :password
       .actions
         = submit_tag
-
