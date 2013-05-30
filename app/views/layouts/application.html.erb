@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>RegistryApp</title>
+  <title>Simplestry</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
   <header class="main-header">
     <div class="container">
-      <span class="logo">RegistryRabbit</span>
+      <span class="logo">Simplestry</span>
       <nav class="main-nav">
         <% if signed_in? %>
           <%= link_to "Sign Out", sign_out_url, method: :delete, class: "button sign-out-button main-header-button" %>
