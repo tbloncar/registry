@@ -7,7 +7,8 @@ gem 'rails', '3.2.13'
 
 gem 'haml'
 gem 'normalize-rails'
-gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
+gem 'paperclip', :git => 'git://github.com/thoughtbot/paperclip.git'
+gem 'cancan'
 
 
 # Gems used only for assets and not required
