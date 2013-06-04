@@ -8,6 +8,8 @@
 $purple: #525789;
 $darkPurple: #484d79;
 $green: #37a883;
+$gold: #FFB90F;
+$darkGold: #dba924;
 
 
 // Fonts
@@ -36,6 +38,10 @@ $green: #37a883;
 // Styles
 // ***************************************
 
+html {
+  overflow-y: scroll;
+}
+
 h1 {
   font-size: 24px;
 }
@@ -55,6 +61,11 @@ h1 {
   margin-top: 25px;
   float: left;
   clear: both;
+  &:hover {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+  }
 }
 
 .main-nav {
@@ -73,9 +84,13 @@ h1 {
   color: #fff;
   cursor: pointer;
   text-transform: uppercase;
+  float: left;
   &:hover {
     text-decoration: none;
     color: #fff;
+  }
+  &:first-of-type {
+    margin-right: 15px;
   }
 }
 
@@ -90,6 +105,13 @@ h1 {
   background: $purple;
   &:hover {
     background: $darkPurple;
+  }
+}
+
+.sign-up-button {
+  background: $gold;
+  &:hover {
+    background: $darkGold;
   }
 }
 

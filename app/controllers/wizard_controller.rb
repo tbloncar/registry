@@ -1,0 +1,3 @@
+class WizardController < ApplicationController
+
+end

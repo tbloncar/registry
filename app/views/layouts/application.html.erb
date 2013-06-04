@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Simplestry</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <title>Simplstry</title>
+  <%= stylesheet_link_tag "application", :media => "all" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
   <header class="main-header">
     <div class="container">
-        <span class="logo">Simplstry</span>
+        <a class="logo" href="/">Simplstry</a>
       <nav class="main-nav">
         <% if signed_in? %>
           <%= link_to "Sign Out", sign_out_url, method: :delete, class: "button sign-out-button main-header-button" %>
         <% else %>
-          <%= link_to "Sign In", sign_in_url, method: :get, class: "button sign-in-button main-header-button" %>
+          <%= link_to "Sign Up", "/register", class: "button sign-up-button main-header-button" %>
+          <%= link_to "Sign In", sign_in_url, class: "button sign-in-button main-header-button" %>
         <% end %>
       </nav>
     </div>

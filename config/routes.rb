@@ -4,6 +4,7 @@ RegistryApp::Application.routes.draw do
   root :to => "Pages#home"
 
   resources :users
+  get "/register" => "Users#new", :as => :register
 
   get "/products/new" => "Products#new", :as => :new_product
   post "/products" => "Products#create", :as => :products

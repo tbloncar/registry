@@ -2,11 +2,12 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
-    user || User.new
-    if user.role.eql("admin")
+    user ||= User.new
+    if user.roles.include?(Role.where(name: "Admin")[0])
         can :manage, :all
     else
         can :read, :all
+        can :create, User
     end
     # Define abilities for the passed in user here. For example:
     #
