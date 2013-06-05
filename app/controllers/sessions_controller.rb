@@ -10,7 +10,8 @@ class SessionsController < ApplicationController
       sign_in(@user)
       redirect_to user_url(@user)
     else
-      render '/sign-in'
+      flash[:error] = "Hm. Something didn't match up."
+      redirect_to sign_in_url
     end
   end
 
