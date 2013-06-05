@@ -46,16 +46,25 @@ html {
   overflow-y: scroll;
 }
 
+body {
+  background: url('/assets/cream_pixels.png') repeat;
+}
+
 h1 {
   font-size: 24px;
+  color: #444;
+  text-shadow: none;
+  font-weight: 600;
 }
 
 h2 {
   font-size: 18px;
+  text-shadow: none;
 }
 
 h3 {
   font-size: 16px;
+  text-shadow: none;
 }
 
 .main-header {
@@ -143,6 +152,17 @@ h3 {
 
 .home-top-left {
 
+}
+
+.home-top-left h1 {
+  color: #3f4944;
+}
+
+.home-top-left h2 {
+  color: #aaa;
+  line-height: 28px;
+  font-weight: 300;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .field input[type=text],
