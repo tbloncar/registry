@@ -1,4 +1,6 @@
 ---
+cream_pixels.png: cream_pixels-31a2559eac30a6275be03605e83e98d7.png
+cream_pixels/index.png: cream_pixels-31a2559eac30a6275be03605e83e98d7.png
 eco.jpg: eco-34e2ccdee139e6cb2a49328ec8113c83.jpg
 eco/index.jpg: eco-34e2ccdee139e6cb2a49328ec8113c83.jpg
 high-fashion.jpg: high-fashion-0550f225a0c5a7ff595ff3a70527f136.jpg
@@ -11,8 +13,8 @@ urban.jpg: urban-67e452ca0ca3fe5d4d68d5a355d3fbc3.jpg
 urban/index.jpg: urban-67e452ca0ca3fe5d4d68d5a355d3fbc3.jpg
 application.js: application-1c1e993f48ddf4e2cd5c979b8e940de9.js
 application/index.js: application-1c1e993f48ddf4e2cd5c979b8e940de9.js
-application.css: application-1c4284a973ad9db92d325001142ec53e.css
-application/index.css: application-1c4284a973ad9db92d325001142ec53e.css
+application.css: application-25676326a86cd579d47aa9c66101fe47.css
+application/index.css: application-25676326a86cd579d47aa9c66101fe47.css
 jquery.min.map: jquery.min-6c267bfd2b3f36e6edccb2e584934c1c.map
 jquery/index.min.map: jquery.min-6c267bfd2b3f36e6edccb2e584934c1c.map
 normalize-rails/index.css: normalize-rails/index-6735f32f5acf890ccd0899af43d5be54.css
