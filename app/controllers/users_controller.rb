@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  include SessionsHelper
   load_and_authorize_resource
   # GET /users
   # GET /users.json
@@ -45,7 +46,8 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
-        format.html { redirect_to redirect_to wizard_account_url, notice: 'User was successfully created.' }
+        sign_in(@user)
+        format.html { redirect_to wizard_account_url, notice: 'User was successfully created.' }
         format.json { render json: @user, status: :created, location: @user }
       else
         format.html { render action: "new" }
