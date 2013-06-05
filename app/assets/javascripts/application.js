@@ -13,3 +13,16 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+jQuery(function($) {
+  // Datepicker for date inputs
+  $('#datepicker').datepicker();
+  // Populate hidden field on lifestyle page
+  $('.wizard-lifestyle-container').click(function() {
+    var typeId = $(this).data('id');
+    $('input[type=hidden]').val(typeId);
+    $('.wizard-lifestyle-container').css('border-color', '#525789');
+    $('.wizard-lifestyle-selected').fadeOut();
+    $(this).find('.wizard-lifestyle-selected').fadeIn();
+    $(this).css('border-color', '#FFB90F');
+  });
+});

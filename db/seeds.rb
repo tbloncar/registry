@@ -12,9 +12,10 @@ User.destroy_all
 UserRole.destroy_all
 
 types = [
-  Type.create(name: "Classic"),
-  Type.create(name: "Premium"),
-  Type.create(name: "Urban")
+  Type.create(name: "Urban", image_url: "/assets/urban.jpg"),
+  Type.create(name: "Suburban", image_url: "/assets/suburban.png"),
+  Type.create(name: "Eco-Friendly", image_url: "/assets/eco.jpg"),
+  Type.create(name: "High Fashion", image_url: "/assets/high-fashion.jpg")
 ]
 
 puts "You have #{Type.all.count} types."

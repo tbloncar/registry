@@ -1,2 +1,34 @@
 <h1>Account Information</h1>
 <h2>Help us make your registry experience a good one.</h2>
+<%= form_for @user, method: "put" do |f| %>
+  <h3>Address</h3>
+  <div class="field">
+    <%= f.label :street %>
+    <%= f.text_field :street, placeholder: "123 Hello Street", required: "required" %>
+  </div>
+  <div class="field">
+    <%= f.label :city %>
+    <%= f.text_field :city, placeholder: "New York", required: "required" %>
+  </div>
+  <div class="field">
+    <%= f.label :state, "State" %>
+    <%= f.select :state, us_states, prompt: "Select State", required: "required" %>
+  </div>
+  <div class="field">
+    <%= f.label :zip, "Zip Code" %>
+    <%= f.text_field :zip, placeholder: "12345", required: "required" %>
+  </div>
+  <h3>Baby Details</h3>
+  <div class="field">
+    <%= f.label :due_date %>
+    <%= f.text_field :due_date, id: "datepicker" %>
+  </div>
+  <div class="field">
+    <%= f.label :baby_gender %>
+    <%= f.select :baby_gender, genders, prompt: "Choose Gender" %>
+  </div>
+  <input type="hidden" value="present" name="wizard">
+  <div class="field">
+    <%= f.submit nil, value: "Save Account Information" %>
+  </div>
+<% end %>
