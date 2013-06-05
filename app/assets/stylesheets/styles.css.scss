@@ -15,15 +15,15 @@ $darkGold: #dba924;
 // Fonts
 // ***************************************
 
-@import url(http://fonts.googleapis.com/css?family=Lemon);
-@import url(http://fonts.googleapis.com/css?family=Open+Sans);
-
 @import url(http://weloveiconfonts.com/api/?family=fontawesome);
 
 /* fontawesome */
 [class*="fontawesome-"]:before {
   font-family: 'FontAwesome', sans-serif;
 }
+
+@import url(http://fonts.googleapis.com/css?family=Lemon);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
 
 
 // Mixins
