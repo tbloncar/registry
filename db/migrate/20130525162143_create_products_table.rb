@@ -6,6 +6,7 @@ class CreateProductsTable < ActiveRecord::Migration
       p.text :description
       p.decimal :price
       p.integer :type_id
+      p.integer :category_id
 
       p.timestamps
     end

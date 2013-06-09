@@ -58,7 +58,15 @@ module WizardHelper
   def genders
     [
       ['Boy', 'boy'],
-      ['Girl', 'girl']
+      ['Girl', 'girl'],
+      ['Surprise!', 'surprise']
+    ]
+  end
+
+  def shower
+    [
+      ['Yes', true],
+      ['No', false]
     ]
   end
 end

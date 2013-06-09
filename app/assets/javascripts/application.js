@@ -14,8 +14,7 @@
 //= require jquery_ujs
 //= require_tree .
 jQuery(function($) {
-  // Datepicker for date inputs
-  $('#datepicker').datepicker();
+  init();
   // Populate hidden field on lifestyle page
   $('.wizard-lifestyle-container').click(function() {
     var typeId = $(this).data('id');
@@ -25,4 +24,28 @@ jQuery(function($) {
     $(this).find('.wizard-lifestyle-selected').fadeIn();
     $(this).css('border-color', '#FFB90F');
   });
+  // Add date field if shower value is yes
+  $('#user_shower').change(function() {
+    if($(this).find('option:selected').val() === "true") {
+      $('.shower-date').show();
+    }
+    else {
+      $('.shower-date').hide();
+      $('.shower-date input').val('');
+    }
+  });
+  function showShowerDate() {
+    if($('#user_shower option:selected').val() === "true") {
+      $('.shower-date').show();
+    }
+  }
+  function enableDatepicker() {
+    $('.datepicker').each(function() {
+      $(this).datepicker();
+    });
+  }
+  function init() {
+    enableDatepicker();
+    showShowerDate();
+  }
 });

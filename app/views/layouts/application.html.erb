@@ -30,6 +30,9 @@
       <p class='notice'><%=h flash[:notice] %></p>
     <% end -%>
     <%= yield %>
+    <footer class="main-footer">
+      <p>&copy; Copyright Simplstry <%= Time.now.year %></p>
+    </footer>
   </div>
  <%= javascript_include_tag "application" %>
 </body>
