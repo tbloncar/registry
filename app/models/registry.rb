@@ -4,4 +4,8 @@ class Registry < ActiveRecord::Base
   belongs_to :user
   has_many :products, through: :registry_products
   has_many :registry_products
+
+  def category_products(category_id)
+    products.where(category_id: category_id)
+  end
 end

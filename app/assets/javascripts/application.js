@@ -18,7 +18,7 @@ jQuery(function($) {
   // Populate hidden field on lifestyle page
   $('.wizard-lifestyle-container').click(function() {
     var typeId = $(this).data('id');
-    $('input[type=hidden]').val(typeId);
+    $('input#lifestyle_type').val(typeId);
     $('.wizard-lifestyle-container').css('border-color', '#525789');
     $('.wizard-lifestyle-selected').fadeOut();
     $(this).find('.wizard-lifestyle-selected').fadeIn();

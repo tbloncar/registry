@@ -50,6 +50,10 @@ body {
   background: url('/assets/cream_pixels.png') repeat;
 }
 
+.page-header {
+  margin-bottom: 20px;
+}
+
 h1 {
   font-size: 24px;
   color: #444;
@@ -220,5 +224,36 @@ h3 {
   right: 10px;
   display: none;
   font-size: 20px;
+}
+
+// Registry
+// ***************************************
+
+.product-box {
+  width: 130px;
+  height: 180px;
+  padding: 40px;
+  border: 1px solid #ccc;
+  background: rgba(255,255,255,0.8);
+  float: left;
+  margin-right: 20px;
+  color: #222;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  &:hover {
+    border: 1px solid #aaa;
+    text-decoration: none;
+    color: #222;
+    cursor: pointer;
+  }
+}
+
+.product-box img {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.category-row {
+  margin: 15px 0;
 }
 

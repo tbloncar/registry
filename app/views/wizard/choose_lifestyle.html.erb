@@ -9,9 +9,9 @@
     </div>
   <% end %>
 </div>
-<%= form_for @registry do |f| %>
-  <input type="hidden" name="type" value="">
+<%= form_tag registries_url do %>
+  <%= hidden_field_tag :lifestyle_type %>
   <div class="field">
-    <%= f.submit nil, value: "Create My Registry", class: "button form-button" %>
+    <%= submit_tag nil, value: "Create My Registry", class: "button form-button" %>
   </div>
 <% end %>

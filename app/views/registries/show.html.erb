@@ -1,0 +1,22 @@
+<div class="row-fluid">
+  <div class="span12 page-header">
+    <h1><%= @registry.name %></h1>
+    <p>Click an item to learn why we think it's a good fit for you!</p>
+  </div>
+</div>
+<% @categories.each do |category| %>
+<div class="row-fluid">
+  <div class="span2 category-name">
+    <h2><%= category.name %></h2>
+  </div>
+  <div class="span10 category-row">
+    <% @registry.category_products(category.id).each do |product| %>
+      <a class="product-box">
+        <img src="/assets/custom-item.png">
+        <%= product.name %>
+      </a>
+    <% end %>
+  </div>
+</div>
+<% end %>
+

@@ -22,6 +22,7 @@ RegistryApp::Application.routes.draw do
   post "/registries" => "Registries#create", :as => :registries
   put "/registries/:registry_id" => "Registries#update", :as => :registry
   delete "/registries/:registry_id" => "Registry#destroy", :as => :registry
+  get "/users/:id/registry" => "Registries#show", :as => :user_registry
 
   get "/setup/account-information" => "Wizard#account_information", :as => :wizard_account
   get "/setup/lifestyle" => "Wizard#choose_lifestyle", :as => :wizard_lifestyle
