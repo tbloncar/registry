@@ -51,7 +51,7 @@ user_roles = [
 puts "You have #{UserRole.all.count} user roles."
 
 products = [
-  Product.create(name: "UPPAbaby Vista Stroller", description: "The VISTA is a convertible stroller system that can transport up to three children – without growing wider. Designed to adapt as your family grows, the VISTA accommodates your precious cargo from birth through the toddler years.", price: 730.00, type_id: Type.first.id, category_id: Category.first.id),
+  Product.create(name: "UPPAbaby Vista Stroller", description: "The VISTA is a convertible stroller system that can transport up to three children - without growing wider. Designed to adapt as your family grows, the VISTA accommodates your precious cargo from birth through the toddler years.", price: 730.00, type_id: Type.first.id, category_id: Category.first.id),
   Product.create(name: "UPPABaby Vista Snack Tray", description: "Formed cup holder fits sippy cup and juice boxes of various sizes. BPA free, dishwasher safe.", price: 40.00, type_id: Type.last.id, category_id: Category.first.id),
   Product.create(name: "ERGObaby Original Baby Carrier", description: "The ergonomic design is so comfortable, you can wear the carrier longer because the padded shoulder straps and padded waistbelt evenly distribute baby’s weight between your shoulders and hips.", price: 125.00, type_id: Type.first.id, category_id: Category.first.id),
   Product.create(name: "JJ Cole Collections Strap Cover", description: "These reversible strap covers are a stylish way to make your baby's car seat more comfortable. They easily wrap around the car seat harness to protect your child's face from the rubbing of rough seat belts.", price: 10.00, type_id: Type.last.id, category_id: Category.first.id),
