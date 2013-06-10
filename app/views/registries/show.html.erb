@@ -2,6 +2,8 @@
   <div class="span12 page-header">
     <h1><%= @registry.name %></h1>
     <p>Click an item to learn why we think it's a good fit for you!</p>
+    <%= form_tag registry_url(@registry), method: "put", class: "public-form" %>
+      <button class="button form-button">Make It Public!</button>
   </div>
 </div>
 <% @categories.each do |category| %>
@@ -11,7 +13,7 @@
   </div>
   <div class="span10 category-row">
     <% @registry.category_products(category.id).each do |product| %>
-      <a class="product-box">
+      <a href="/users/<%= @user.id %>/registry/<%= product.id %>" class="product-box">
         <img src="/assets/custom-item.png">
         <%= product.name %>
       </a>

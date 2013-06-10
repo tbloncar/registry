@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(:version => 20130609213451) do
     t.integer "registry_id"
     t.integer "product_id"
     t.text    "description"
+    t.integer "quantity",    :default => 0
   end
 
   create_table "roles", :force => true do |t|

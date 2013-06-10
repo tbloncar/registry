@@ -27,4 +27,7 @@ RegistryApp::Application.routes.draw do
   get "/setup/account-information" => "Wizard#account_information", :as => :wizard_account
   get "/setup/lifestyle" => "Wizard#choose_lifestyle", :as => :wizard_lifestyle
 
+  get "/users/:id/registry/:product_id" => "RegistryProducts#show", :as => :registry_product
+  put "/users/:id/registry/:product_id" => "RegistryProducts#update", :as => :registry_product
+
 end

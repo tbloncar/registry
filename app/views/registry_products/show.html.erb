@@ -1,0 +1,19 @@
+<div class="row-fluid">
+  <div class="span4">
+    <%= link_to "Back to Registry", user_registry_url(@user), class: "button form-button" %>
+    <div class="registry-product-image">
+      <img src="/assets/custom-item.png">
+    </div>
+  </div>
+  <div class="span7 offset1 registry-product-info">
+    <h1><%= @product.name %> <span class="price-tag">$<%= @product.price.to_i %></h1>
+    <h2>Why This Product</h2>
+    <p class="registry-product-info-why">
+      We recommend this product to you because we think it fits your lifestyle perfectly!
+    </p>
+    <h2>Description</h2>
+    <p class="registry-product-info-description">
+      <%= @product.description %>
+    </p>
+  </div>
+</div>

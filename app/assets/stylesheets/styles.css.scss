@@ -133,10 +133,13 @@ h3 {
   color: #fff;
   cursor: pointer;
   text-transform: uppercase;
+  text-align: center;
   border: none;
   background: $gold;
   &:hover {
     background: $darkGold;
+    text-decoration: none;
+    color: #fff;
   }
 }
 
@@ -248,6 +251,11 @@ h3 {
   }
 }
 
+.public-form {
+  float: right;
+  margin-top: -60px;
+}
+
 .product-box img {
   width: 100%;
   margin-bottom: 10px;
@@ -255,5 +263,20 @@ h3 {
 
 .category-row {
   margin: 15px 0;
+}
+
+// Registry Product
+// ***************************************
+
+.registry-product-image {
+  padding: 30px;
+}
+
+.price-tag {
+  padding: 5px 20px;
+  background: #ccc;
+  border-radius: 5px;
+  color: #fff;
+  margin-left: 10px;
 }
 
