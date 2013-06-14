@@ -1,5 +1,5 @@
 class Product < ActiveRecord::Base
-  attr_accessible :name, :description, :price, :image, :type_id, :category_id
+  attr_accessible :name, :description, :price, :image, :type_id, :category_id, :product_url
 
   has_attached_file :image, :styles => { medium: "300x300>", thumb: "150x150>", default_url: "/assets/custom-item.png" }
   has_many :registries, through: :registry_products

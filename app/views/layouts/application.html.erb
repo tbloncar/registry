@@ -2,37 +2,50 @@
 <html>
 <head>
   <title>Simplstry</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Lemon' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag "application", :media => "all" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <header class="main-header">
-    <div class="container">
-        <a class="logo" href="/">Simplstry</a>
-      <nav class="main-nav">
-        <% if signed_in? %>
-          <%= link_to "Sign Out", sign_out_url, method: :delete, class: "button sign-out-button main-header-button" %>
-        <% else %>
-          <%= link_to "Sign Up", "/register", class: "button sign-up-button main-header-button" %>
-          <%= link_to "Sign In", sign_in_url, class: "button sign-in-button main-header-button" %>
-        <% end %>
-      </nav>
+  <!---->
+   <div class="navbar navbar-inverse navbar-fixed-top">
+   <div class="navbar-inner2 signin-bar">
+   <div class="container">
+    <div class="span4 offset6">
+    <% if signed_in? %>
+      <% if has_registry? %>
+        <%= link_to "View Registry", user_registry_url(current_user) %>
+      <% end %>
+      <%= link_to "Sign Out", sign_out_url, method: :delete %>
+    <% else %>
+      <%= link_to "Sign Up", "/register" %>
+      <%= link_to "Sign In", sign_in_url %>
+    <% end %>
     </div>
-  </header>
-  <div class="container">
-    <% if flash[:error] -%>
-      <p class='error'><%=h flash[:error] %></p>
-    <% end -%>
-    <% if flash[:notice] -%>
-      <p class='notice'><%=h flash[:notice] %></p>
-    <% end -%>
-    <%= yield %>
-    <footer class="main-footer">
-      <p>&copy; Copyright Simplstry <%= Time.now.year %></p>
-    </footer>
+    </div><!--/.container-->
+    </div><!--/.navbar-inner-->
+    </div>
+    
+    <div class="navbar-inner grad">
+   <div class="container">
+    <div class="span4 logo-cont">
+       <a href="/"><img src="/assets/simplstry-logo.png" class="visible-desktop"></a>
+    <a href="/"><img src="/assets/simplstry-mobile.png" class="visible-phone visible-tablet"></a>
+    </div>
+    </div><!--/.container-->
+    </div><!--/.navbar-inner-->
+      <%= yield %>
+    <div class="container footer">
+     <div class="row footer-row">
+   <div class="span5 offset1 copyright">&copy; 2013 Simplstry. All rights reserved.</div>
+   <div class="span6 contact-box">
+   <div class="contact-box-inner">Contact Us <a href="mailto:simplstry@mail.com"><img src="/assets/email-ico.png" class="btm-icons"></a><a href="http://twitter.com/simplstry"><img src="/assets/white-twitter.png"  class="btm-icons" width="70" height="39"></a>    </div>
+        </div>
+      </div>
+    </div>
   </div>
  <%= javascript_include_tag "application" %>
 </body>

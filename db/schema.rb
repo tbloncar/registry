@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(:version => 20130609213451) do
     t.decimal  "price"
     t.integer  "type_id"
     t.integer  "category_id"
+    t.string   "product_url"
     t.datetime "created_at",         :null => false
     t.datetime "updated_at",         :null => false
   end
@@ -38,6 +39,7 @@ ActiveRecord::Schema.define(:version => 20130609213451) do
     t.string  "name"
     t.text    "description"
     t.integer "user_id"
+    t.integer "type_id"
   end
 
   create_table "registry_products", :force => true do |t|
@@ -54,6 +56,7 @@ ActiveRecord::Schema.define(:version => 20130609213451) do
   create_table "types", :force => true do |t|
     t.string   "name"
     t.string   "image_url"
+    t.string   "icon_url"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

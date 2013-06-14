@@ -1,42 +1,54 @@
-<h1>Account Information</h1>
-<h2>Help us make your registry experience a good one.</h2>
-<%= form_for @user, method: "put" do |f| %>
-  <h3>Address</h3>
-  <div class="field">
-    <%= f.label :street %>
-    <%= f.text_field :street, placeholder: "123 Hello Street", required: "required" %>
-  </div>
-  <div class="field">
-    <%= f.label :city %>
-    <%= f.text_field :city, placeholder: "New York", required: "required" %>
-  </div>
-  <div class="field">
-    <%= f.label :state, "State" %>
-    <%= f.select :state, us_states, prompt: "Select State", required: "required" %>
-  </div>
-  <div class="field">
-    <%= f.label :zip, "Zip Code" %>
-    <%= f.text_field :zip, placeholder: "12345", required: "required" %>
-  </div>
-  <h3>Baby Details</h3>
-  <div class="field">
-    <%= f.label :due_date, "Due Date" %>
-    <%= f.text_field :due_date, class: "datepicker" %>
-  </div>
-  <div class="field">
-    <%= f.label :baby_gender, "Baby's Gender" %>
-    <%= f.select :baby_gender, genders, prompt: "Choose Gender" %>
-  </div>
-  <div class="field">
-    <%= f.label :shower, "Having a Shower?" %>
-    <%= f.select :shower, shower, prompt: "Choose Yes or No" %>
-  </div>
-  <div class="field shower-date ">
-    <%= f.label :shower_date, "Shower Date" %>
-    <%= f.text_field :shower_date, class: "datepicker" %>
-  </div>
-  <input type="hidden" value="present" name="wizard">
-  <div class="field">
-    <%= f.submit nil, value: "Save Account Information", class: "button form-button" %>
-  </div>
-<% end %>
+<div class="container">
+  <h1>Account Information</h1>
+  <h2 class="subheader">Help us make your registry experience a good one.</h2>
+  <%= form_for @user, method: "put" do |f| %>
+    <div class="row">
+      <div class="span3 offset3">
+        <h3>Address</h3>
+        <div class="field">
+          <%= f.label :street %>
+          <%= f.text_field :street, placeholder: "123 Hello Street", required: "required" %>
+        </div>
+        <div class="field">
+          <%= f.label :city %>
+          <%= f.text_field :city, placeholder: "New York", required: "required" %>
+        </div>
+        <div class="field">
+          <%= f.label :state, "State" %>
+          <%= f.select :state, us_states, prompt: "Select State", required: "required" %>
+        </div>
+        <div class="field">
+          <%= f.label :zip, "Zip Code" %>
+          <%= f.text_field :zip, placeholder: "12345", required: "required" %>
+        </div>
+      </div>
+      <div class="span3">
+        <h3>Baby Details</h3>
+        <div class="field">
+          <%= f.label :due_date, "Due Date" %>
+          <%= f.text_field :due_date, class: "datepicker" %>
+        </div>
+        <div class="field">
+          <%= f.label :baby_gender, "Baby's Gender" %>
+          <%= f.select :baby_gender, genders, prompt: "Choose Gender" %>
+        </div>
+        <div class="field">
+          <%= f.label :shower, "Having a Shower?" %>
+          <%= f.select :shower, shower, prompt: "Choose Yes or No" %>
+        </div>
+        <div class="field shower-date ">
+          <%= f.label :shower_date, "Shower Date" %>
+          <%= f.text_field :shower_date, class: "datepicker" %>
+        </div>
+        <input type="hidden" value="present" name="wizard">
+      </div>
+    </div>
+    <div class="row">
+      <div class="span12">
+        <div class="field">
+          <%= f.submit nil, value: "Save Account Information", class: "button form-button button-center" %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

@@ -6,6 +6,7 @@ class RegistriesController < ApplicationController
       registry.name = "The #{current_user.last_name}'s Registry"
       registry.description = "A registry created by #{current_user.full_name}."
       registry.user_id = current_user.id
+      registry.type_id = params[:lifestyle_type].to_i
       if registry.save
         type = Type.find(params[:lifestyle_type])
         type.products.each do |product|

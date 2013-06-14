@@ -4,6 +4,7 @@ class CreateRegistryTable < ActiveRecord::Migration
       r.string :name
       r.text :description
       r.integer :user_id
+      r.integer :type_id
     end
   end
 end

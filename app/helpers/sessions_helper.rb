@@ -19,4 +19,8 @@ module SessionsHelper
   def signed_in?
     !current_user.nil?
   end
+
+  def has_registry?
+    current_user.registry
+  end
 end

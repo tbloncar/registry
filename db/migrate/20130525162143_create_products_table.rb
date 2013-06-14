@@ -7,6 +7,7 @@ class CreateProductsTable < ActiveRecord::Migration
       p.decimal :price
       p.integer :type_id
       p.integer :category_id
+      p.string :product_url
 
       p.timestamps
     end

@@ -1,17 +1,32 @@
-<h1>Lifestyle</h1>
-<h2>Choose the registry type that best fits your lifestyle.</h2>
-<div class="row-fluid wizard-lifestyle-choose">
-  <% @types.each do |type| %>
-    <div class="span3 wizard-lifestyle-container" data-id="<%= type.id %>">
-      <h2 class="wizard-lifestyle-type"><%= type.name %></h2>
-      <span class="fontawesome-heart wizard-lifestyle-selected"></span>
-      <img src="<%= type.image_url %>">
-    </div>
-  <% end %>
-</div>
+<h1>Select Your Lifestyle</h1>
 <%= form_tag registries_url do %>
   <%= hidden_field_tag :lifestyle_type %>
-  <div class="field">
-    <%= submit_tag nil, value: "Create My Registry", class: "button form-button" %>
-  </div>
+  <p class="learnmore-inside pull-center" style="width: 40%;">
+    <%= submit_tag nil, value: "Create My Registry", style: 'background: none; border: none; color: #fff; text-transform: uppercase;' %>
+    <img src="/assets/proceed-icon.png" class="inline">
+  </p>
 <% end %>
+<div class="row">
+  <div style="width: 80%; margin: 0 auto; ">
+    <% @types[0..1].each do |type| %>
+      <div style="width: 50%; float: left;" class="<%= type.name.downcase %> wizard-lifestyle-container" data-id="<%= type.id %>">
+        <div class="choice-cont">
+          <%= type.name %>
+        </div>
+        <span class="fontawesome-heart wizard-lifestyle-selected"></span>
+      </div>
+    <% end %>
+    <div style="width: 50%; float: left; opacity:0.4;
+filter:alpha(opacity=40); /* For IE8 and earlier */" class="eco">
+      <div class="choice-cont">
+        Eco-Friendly
+      </div>
+    </div>
+    <div style="width: 50%; float: left; opacity:0.4;
+filter:alpha(opacity=40); /* For IE8 and earlier */" class="fashion">
+      <div class="choice-cont">
+        High Fashion
+      </div>
+    </div>
+  </div>
+</div>

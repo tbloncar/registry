@@ -1,24 +1,30 @@
-<div class="row-fluid">
-  <div class="span12 page-header">
-    <h1><%= @registry.name %></h1>
-    <p>Click an item to learn why we think it's a good fit for you!</p>
-    <%= form_tag registry_url(@registry), method: "put", class: "public-form" %>
-      <button class="button form-button">Make It Public!</button>
+<div class="container main-cont">
+  <div class="row">
+    <div class="span12 text-center user-name"><%= @registry.name %><img src="<%= @registry.type.icon_url %>" class="list-type-image"></div>
   </div>
-</div>
-<% @categories.each do |category| %>
-<div class="row-fluid">
-  <div class="span2 category-name">
-    <h2><%= category.name %></h2>
+  <div class="row pull-center">
+    <div class="span12 text-center instructions">Click each item below to see why this product is a good fit for you.</div>
   </div>
-  <div class="span10 category-row">
-    <% @registry.category_products(category.id).each do |product| %>
-      <a href="/users/<%= @user.id %>/registry/<%= product.id %>" class="product-box">
-        <img src="/assets/custom-item.png">
-        <%= product.name %>
-      </a>
-    <% end %>
-  </div>
-</div>
-<% end %>
+  <% @categories.each_with_index do |category, i| %>
+    <div class="row pull-center gray<%= (i + 1).to_s %>">
+      <div class="span2 categorybox">
+        <%= category.name %>
+      </div><!--/.span2--> 
+      <div class="span9 offset1">
+        <% @registry.category_products(category.id).each do |product| %>
+          <div class="productbox" >
+            <a href="/users/<%= @user.id %>/registry/<%= product.id %>">
+              <img src="<%= product.image.url %>">
+            </a>
+          </div>
+        <% end %>
+      </div><!--/.span9--> 
+    </div><!--/.row-->   
+  <% end %>
+  <div class="row pull-center">    
+    <div class="span12">
+      <p class="learnmore-inside pull-center" style="width: 50%;"><a href="<%= approval_url %>">Approve my registry</a><img src="/assets/proceed-icon.png" class="inline"></p>
+    </div>
+  </div><!--/.row--> 
+</div><!--/.container--> 
 

@@ -3,6 +3,7 @@ class CreateTypes < ActiveRecord::Migration
     create_table :types do |t|
       t.string :name
       t.string :image_url
+      t.string :icon_url
 
       t.timestamps
     end

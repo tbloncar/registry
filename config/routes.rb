@@ -2,6 +2,8 @@ RegistryApp::Application.routes.draw do
   resources :types
 
   root :to => "Pages#home"
+  get "/steps" => "Pages#steps", :as => :steps
+  get "/approval" => "Pages#approval", :as => :approval
 
   resources :users
   get "/register" => "Users#new", :as => :register

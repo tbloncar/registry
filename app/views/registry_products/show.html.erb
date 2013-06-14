@@ -1,19 +1,43 @@
-<div class="row-fluid">
-  <div class="span4">
-    <%= link_to "Back to Registry", user_registry_url(@user), class: "button form-button" %>
-    <div class="registry-product-image">
-      <img src="/assets/custom-item.png">
+<div class="container main-cont">
+  <div class="row pull-center ">
+    <div class="span12">
+      <p class="learnmore-inside pull-center" style="width: 40%; font-size: 1.2em;"><a href="<%= user_registry_url(@user) %>"><img src="/assets/back-icon.png" alt="" class="inline">Back to Simplestry</a></p>
     </div>
-  </div>
-  <div class="span7 offset1 registry-product-info">
-    <h1><%= @product.name %> <span class="price-tag">$<%= @product.price.to_i %></h1>
-    <h2>Why This Product</h2>
-    <p class="registry-product-info-why">
-      We recommend this product to you because we think it fits your lifestyle perfectly!
-    </p>
-    <h2>Description</h2>
-    <p class="registry-product-info-description">
-      <%= @product.description %>
-    </p>
-  </div>
+    <h1 class="text-center clearfloat">UPPAbaby Vista Stroller</h1>
+    <div class="span3">
+      <img src="<%= @product.image.url %>">
+    </div>
+    <div class="span7 offset1">
+      <div class="product-info">
+       <p><%= @product.description %></p>
+      </div>
+      <div class="product-info">
+        <strong>PRICE: </strong><%= number_to_currency(@product.price, unit: "$") %>
+      </div>
+      <div class="remove-cont">
+        <a href="#"><img src="/assets/remove-btn.png"></a>
+      </div>
+      <div class="qty-cont">
+        <p>change the Quantity</p>
+        <div class="btn-group">
+        <button class="btn">Qty:</button>
+        <button class="btn dropdown-toggle" data-toggle="dropdown">
+          <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+          <li><a tabindex="-1" href="#">1</a></li>
+          <li><a tabindex="-1" href="#">2</a></li>
+          <li><a tabindex="-1" href="#">3</a></li>
+
+          <li><a tabindex="-1" href="#">4</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="custom-enter">
+      <p>Interested in a different product? Tell us what product you&rsquo;d like instead and we will swap it out for you</p>
+      <input name="Product URL" type="text" style="width: 50%;">
+      <input type="submit" name="Submit" id="Submit" value="Submit" style="width: 30%;margin-left: 14px; margin-top: -7px;">
+    </div>
+  </div> 
+</div>
 </div>
