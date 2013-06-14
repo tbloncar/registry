@@ -14,7 +14,7 @@
         <% @registry.category_products(category.id).each do |product| %>
           <div class="productbox" >
             <a href="/users/<%= @user.id %>/registry/<%= product.id %>">
-              <img src="<%= product.image.url %>">
+              <img src="<%= product.img_url %>">
             </a>
           </div>
         <% end %>

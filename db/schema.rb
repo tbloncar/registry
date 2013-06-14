@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(:version => 20130609213451) do
     t.integer  "type_id"
     t.integer  "category_id"
     t.string   "product_url"
+    t.string   "img_url"
     t.datetime "created_at",         :null => false
     t.datetime "updated_at",         :null => false
   end
