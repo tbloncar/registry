@@ -22,7 +22,7 @@ jQuery(function($) {
     $('.wizard-lifestyle-container').css('border-color', '#525789');
     $('.wizard-lifestyle-selected').fadeOut();
     $(this).find('.wizard-lifestyle-selected').fadeIn();
-    $(this).css('border-color', '#FFB90F');
+    $("form").submit();
   });
   // Add date field if shower value is yes
   $('#user_shower').change(function() {
